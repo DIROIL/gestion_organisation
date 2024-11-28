@@ -1,10 +1,11 @@
-package com.yowyob.gestion_ressources;
+package com.yowyob.gestion_agence;
+
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GestionRessourcesApplicationTests {
+class GestionAgencesApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.yowyob.gestion_organisation.application.dto;
+package com.yowyob.gestion_agence.application.dto;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class OrganisationRequest {
+public class AgenceRequest {
     private UUID id;
     private String name;
     private String description;

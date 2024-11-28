@@ -1,4 +1,4 @@
-package com.yowyob.gestion_organisation.api.docs;
+package com.yowyob.gestion_agence.api.docs;
 
 import java.util.List;
 
@@ -39,10 +39,10 @@ public class OpenAPIConfig {
     License mitLicense = new License().name("MIT License").url("https://choosealicense.com/licenses/mit/");
 
     Info info = new Info()
-        .title("API de gestion des ressources")
+        .title("API de gestion des agences")
         .version("1.0")
         .contact(contact)
-        .description("Cet API est un endpoint pour la gestion des ressources.").termsOfService("http://localhost:4000/ressources")
+        .description("Cet API est un endpoint pour la gestion des agences.").termsOfService("http://localhost:4000/ressources")
         .license(mitLicense);
 
     return new OpenAPI().info(info).servers(List.of(devServer, prodServer));

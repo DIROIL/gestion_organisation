@@ -1,4 +1,4 @@
-package com.yowyob.gestion_organisation.application.dto;
+package com.yowyob.gestion_agence.application.dto;
 
 import java.util.UUID;
 
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class OrganisationResponse {
+public class AgenceResponse {
     private UUID id;
     private String name;
     private String description;
