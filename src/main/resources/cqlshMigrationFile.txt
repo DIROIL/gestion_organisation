@@ -1,0 +1,18 @@
+######Création du keyspace avec un facteur de réplication
+
+CREATE KEYSPACE IF NOT EXISTS yowyobdb 
+WITH replication = {'class': 'NetworkTopologyStrategy', 'replication_factor': 1};
+
+USE yowyobdb;
+
+######Création de la table agence
+
+CREATE TABLE IF NOT EXISTS agence (
+    id TEXT PRIMARY KEY,
+    ownerId  TEXT,
+    domainKey TEXT,
+    userId UUID,      
+    name TEXT,                     
+    description TEXT,
+
+);
