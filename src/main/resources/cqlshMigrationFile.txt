@@ -1,0 +1,29 @@
+######Création du keyspace avec un facteur de réplication
+
+CREATE KEYSPACE IF NOT EXISTS yowyobdb 
+WITH replication = {'class': 'NetworkTopologyStrategy', 'replication_factor': 1};
+
+USE yowyobdb;
+
+######Création de la table organisation
+
+CREATE TABLE IF NOT EXISTS organisation (
+    id TEXT PRIMARY KEY,
+    ownerId  TEXT,
+    domainKey TEXT,
+    userId UUID,      
+    name TEXT,                     
+    description TEXT,
+
+);
+
+-- Création de la table images
+CREATE TABLE images (
+    id TEXT PRIMARY KEY,                -- Identifiant unique de l'image
+    name TEXT,                          -- Nom de l'image
+    path TEXT,                          -- Chemin où l'image est stockée
+    size BIGINT,                        -- Taille de l'image (en octets)
+    fileType TEXT,                      -- Type de fichier (par ex : "image/png")
+    idOrganisation TEXT                    -- Identifiant de la organisation associée
+);
+

@@ -1,0 +1,10 @@
+version: '4.1.5'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    environment:
+      CASSANDRA_START_RPC: 'true'
